@@ -3,6 +3,11 @@
 This is the official MAQ / BiG MAQ Studios testing tap for
 [`pkmn-cli`](https://github.com/AAAMAQ/pkmn-cli).
 
+The packaged tool is an independent MIT-licensed educational, research,
+archival, and game-preservation project. This tap does not distribute ROMs or
+private save data and is not affiliated with Nintendo, Game Freak, Creatures,
+or The Pokémon Company.
+
 Until the first stable tagged release, install the verified public `main`
 branch explicitly with `--HEAD`:
 
