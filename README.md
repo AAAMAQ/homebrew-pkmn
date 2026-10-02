@@ -27,8 +27,10 @@ brew test AAAMAQ/pkmn/pkmn-cli
 The formula builds from a versioned source archive with its downloaded SHA-256.
 Homebrew installs CMake and Python as required; this is not a prebuilt bottle.
 For an update, run `brew update` then `brew upgrade AAAMAQ/pkmn/pkmn-cli`.
-If you previously installed `--HEAD`, use `brew reinstall AAAMAQ/pkmn/pkmn-cli`
-to move to stable. Use `--HEAD` only when deliberately testing development code.
+If you previously installed `--HEAD`, run `brew uninstall AAAMAQ/pkmn/pkmn-cli`
+followed by `brew install AAAMAQ/pkmn/pkmn-cli` to move to stable. This only
+removes the installed CLI package, not your saves. Reinstalling preserves
+`--HEAD`; use that mode only when deliberately testing development code.
 
 The Japanese conversion routes are experimental; review the release notes and
 test generated copies in your emulator. This tap does not distribute ROMs,
