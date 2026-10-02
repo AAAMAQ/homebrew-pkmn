@@ -1,6 +1,6 @@
 # Homebrew tap for pkmn-cli
 
-This is the official MAQ / BiG MAQ Studios testing tap for
+This is the official MAQ / BiG MAQ Studios Homebrew tap for
 [`pkmn-cli`](https://github.com/AAAMAQ/pkmn-cli).
 
 The packaged tool is an independent MIT-licensed educational, research,
@@ -8,14 +8,14 @@ archival, and game-preservation project. This tap does not distribute ROMs or
 private save data and is not affiliated with Nintendo, Game Freak, Creatures,
 or The Pokémon Company.
 
-Until the first stable tagged release, install the verified public `main`
-branch explicitly with `--HEAD`:
+Install the stable 3.1.0 release:
 
 ```sh
 brew tap AAAMAQ/pkmn
-brew install --HEAD AAAMAQ/pkmn/pkmn-cli
+brew install AAAMAQ/pkmn/pkmn-cli
 pkmn --version
 pkmn doctor --deep
+pkmn interactive
 ```
 
 Run the formula test with:
@@ -24,6 +24,12 @@ Run the formula test with:
 brew test AAAMAQ/pkmn/pkmn-cli
 ```
 
-The formula will move to an immutable tagged source archive and its downloaded
-SHA-256 only after the release acceptance gates are complete. This tap does not
-distribute ROMs, saves, screenshots, or proof evidence.
+The formula builds from a versioned source archive with its downloaded SHA-256.
+Homebrew installs CMake and Python as required; this is not a prebuilt bottle.
+For an update, run `brew update` then `brew upgrade AAAMAQ/pkmn/pkmn-cli`.
+If you previously installed `--HEAD`, use `brew reinstall AAAMAQ/pkmn/pkmn-cli`
+to move to stable. Use `--HEAD` only when deliberately testing development code.
+
+The Japanese conversion routes are experimental; review the release notes and
+test generated copies in your emulator. This tap does not distribute ROMs,
+saves, screenshots, or proof evidence.
